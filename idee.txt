@@ -1,0 +1,9 @@
+DISPLAY LCD 128x64: https://www.ebay.it/itm/291022280919
+	suo datasheet e collegamenti	https://www.buydisplay.com/download/manual/ERC12864-1_Series_Datasheet.pdf
+					https://www.buydisplay.com/download/interfacing/ERC12864-1_Interfacing.pdf
+POSSIBILE GPS: https://www.digikey.it/it/products/detail/u-blox/MAX-M8C-0/6150635
+POSSIBILE ANTENNA: https://www.digikey.it/it/products/detail/yic/ATPG1590R1040A/15648607
+ATMEGA328P: https://www.digikey.it/it/products/detail/microchip-technology/ATMEGA328P-AN/2357082
+ALTRO POSSIBILE DISPLAY: https://www.digikey.it/it/products/detail/focus-lcds/G132CLGFGSW6WTCCXAL/12691213
+POSSIBILE BUSSOLA: https://www.digikey.it/it/products/detail/stmicroelectronics/LSM303AGRTR/6006100
+
