@@ -467,7 +467,7 @@
     (property "Value" "SW_Reset" (id 1) (at 113.03 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "Button_Switch_SMD:SW_SPST_Omron_B3FS-101xP" (id 2) (at 113.03 52.07 0)
+    (property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (id 2) (at 113.03 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 113.03 52.07 0)

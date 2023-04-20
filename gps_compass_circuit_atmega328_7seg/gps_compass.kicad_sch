@@ -159,9 +159,6 @@
     (path "/86dd57df-c8f7-440f-975d-3cfdd6cf060e/e950974d-1b7e-436b-93b3-21b8368fef0a"
       (reference "C_sup1") (unit 1) (value "3.9v200F") (footprint "Capacitor_THT:C_Rect_L9.0mm_W2.5mm_P7.50mm_MKT")
     )
-    (path "/86dd57df-c8f7-440f-975d-3cfdd6cf060e/fd04aaa0-5e4c-4660-a7d4-06248e8e4e36"
-      (reference "C_sup2") (unit 1) (value "3.9v200F") (footprint "Capacitor_THT:C_Rect_L9.0mm_W2.5mm_P7.50mm_MKT")
-    )
     (path "/6566b710-0e58-4afb-a9fb-101ea90703bb/ab10b9ba-7874-4ecc-8ad4-9f0081478f26"
       (reference "Cdtr1") (unit 1) (value "0.1uF") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
@@ -186,11 +183,14 @@
     (path "/86dd57df-c8f7-440f-975d-3cfdd6cf060e/68575ef9-4823-41ed-b309-b95b8ee96be3"
       (reference "D2") (unit 1) (value "BZV55B3V9") (footprint "Diode_THT:D_A-405_P7.62mm_Horizontal")
     )
+    (path "/1e53fc31-6b26-4da1-9069-056d8f93658a/e4f53b40-9649-452b-bef4-b8d68a99257a"
+      (reference "J1") (unit 1) (value "Conn_01x05") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical")
+    )
     (path "/672cc2b9-6dc4-44d3-85c3-8d68ae317e11/e19cb6e2-5aa0-4e95-bb67-bae7669d438a"
       (reference "JDisplay1") (unit 1) (value "Conn_01x05") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical")
     )
-    (path "/1e53fc31-6b26-4da1-9069-056d8f93658a/cc834c7f-76fc-4d85-9748-3e949de5666a"
-      (reference "JGPS1") (unit 1) (value "Conn_01x06") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical")
+    (path "/1e53fc31-6b26-4da1-9069-056d8f93658a/97d0ca59-8950-42bb-bdb9-fd7d1c5bd997"
+      (reference "JGPS1") (unit 1) (value "Conn_01x05") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical")
     )
     (path "/6566b710-0e58-4afb-a9fb-101ea90703bb/ace302fc-ae32-48bf-93c2-a443253b7448"
       (reference "JMicroSD1") (unit 1) (value "Micro_SD_Card") (footprint "Connector_Card:microSD_HC_Molex_47219-2001")
@@ -244,19 +244,16 @@
       (reference "SJoystick1") (unit 1) (value "JS1300AQ") (footprint "SW_JS1300AQ")
     )
     (path "/672cc2b9-6dc4-44d3-85c3-8d68ae317e11/ac642c5d-fddd-424e-bafd-ecd4d13d44c0"
-      (reference "SWLed1") (unit 1) (value "SW_Reset") (footprint "Button_Switch_SMD:SW_SPST_Omron_B3FS-101xP")
+      (reference "SWLed1") (unit 1) (value "SW_Reset") (footprint "Button_Switch_THT:SW_PUSH_6mm")
     )
     (path "/6566b710-0e58-4afb-a9fb-101ea90703bb/6672b465-7d07-4973-b90f-b82f2a26d2ac"
-      (reference "SWReset1") (unit 1) (value "SW_Reset") (footprint "Button_Switch_SMD:SW_SPST_Omron_B3FS-101xP")
+      (reference "SWReset1") (unit 1) (value "SW_Reset") (footprint "Button_Switch_THT:SW_PUSH_6mm")
     )
     (path "/86dd57df-c8f7-440f-975d-3cfdd6cf060e/ecf2d208-c089-4a47-aa2a-263b499f47a4"
       (reference "SW_MCU1") (unit 1) (value "SW_DPDT_x2") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical")
     )
     (path "/86dd57df-c8f7-440f-975d-3cfdd6cf060e/46fcf2e8-6b75-4a9b-8711-8db63cb00ef4"
       (reference "SW_main_switch1") (unit 1) (value "SW_DPDT_x2") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical")
-    )
-    (path "/1e53fc31-6b26-4da1-9069-056d8f93658a/13e285f1-24ef-4828-a109-d6650ee48e0c"
-      (reference "U1") (unit 1) (value "LSM303C") (footprint "Package_LGA:LGA-12_2x2mm_P0.5mm")
     )
     (path "/087b627b-351a-4ffe-82d4-e19b159e913a/07265926-219d-45f4-b132-fa709cb4712f"
       (reference "U3") (unit 1) (value "ATmega328P-A") (footprint "Package_QFP:TQFP-32_7x7mm_P0.8mm")
