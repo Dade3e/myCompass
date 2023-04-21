@@ -184,7 +184,7 @@
       (reference "D2") (unit 1) (value "BZV55B3V9") (footprint "Diode_THT:D_A-405_P7.62mm_Horizontal")
     )
     (path "/1e53fc31-6b26-4da1-9069-056d8f93658a/e4f53b40-9649-452b-bef4-b8d68a99257a"
-      (reference "J1") (unit 1) (value "Conn_01x05") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical")
+      (reference "JCompass1") (unit 1) (value "Conn_01x05") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical")
     )
     (path "/672cc2b9-6dc4-44d3-85c3-8d68ae317e11/e19cb6e2-5aa0-4e95-bb67-bae7669d438a"
       (reference "JDisplay1") (unit 1) (value "Conn_01x05") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical")

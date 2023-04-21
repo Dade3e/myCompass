@@ -500,7 +500,7 @@
     (uuid e19cb6e2-5aa0-4e95-bb67-bae7669d438a)
     (property "Reference" "JDisplay1" (id 0) (at 127 64.77 0))
     (property "Value" "Conn_01x05" (id 1) (at 127 67.31 0))
-    (property "Footprint" "" (id 2) (at 127 76.2 0)
+    (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" (id 2) (at 127 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 127 76.2 0)
