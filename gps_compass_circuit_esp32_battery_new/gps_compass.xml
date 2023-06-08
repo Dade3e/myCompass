@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/dbarchetta/Arduino/myCompass/gps_compass_circuit_esp32_battery/gps_compass.kicad_sch</source>
+    <date>mar 6 giu 2023, 17:34:14</date>
+    <tool>Eeschema 7.0.2-1.fc38</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Esp32_gps_compass</title>
+        <company>Davide Barchetta</company>
+        <rev>v0.1</rev>
+        <date>2023-06-05</date>
+        <source>gps_compass.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BT1">
+      <value>Battery_Cell</value>
+      <footprint>Connector_Hirose:Hirose_DF13C_CL535-0402-2-51_1x02-1MP_P1.25mm_Vertical</footprint>
+      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single-cell battery"/>
+      <property name="ki_keywords" value="battery cell"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7de4a051-67d4-4259-b53f-b687f9415a8a</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ffb8d059-ec99-4247-af8e-8b9757f3b740</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8206b06-1e29-4296-86f0-46a3737c09ef</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30407efd-eb7c-4977-9941-9233c1d434c4</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>4,7uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9e22ba0a-f75c-41e7-93b6-e898e4c239f6</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ebc5d8f-8cef-4fbc-bd66-23071a670e04</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>0,1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c7416112-422a-4b98-8722-aa8cbe20a611</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e04fa44-c717-41ee-baf3-cb6755c3ec33</tstamps>
+    </comp>
+    <comp ref="En1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_SMD:SW_SPST_EVQPE1</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>399a02a0-1e71-46e0-9bc4-b959324e216e</tstamps>
+    </comp>
+    <comp ref="ESP32">
+      <value>SW_SPDT</value>
+      <footprint>Button_Switch_SMD:SW_SPDT_PCM12</footprint>
+      <libsource lib="Switch" part="SW_SPDT" description="Switch, single pole double throw"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Switch, single pole double throw"/>
+      <property name="ki_keywords" value="switch single-pole double-throw spdt ON-ON"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a111442-c2e2-4b44-a973-6e35a48116b5</tstamps>
+    </comp>
+    <comp ref="ESP32-S1">
+      <value>ESP32-WROOM-32U</value>
+      <footprint>RF_Module:ESP32-WROOM-32U</footprint>
+      <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf</datasheet>
+      <libsource lib="RF_Module" part="ESP32-WROOM-32U" description="RF Module, ESP32-D0WD SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, external antenna, SMD"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="RF Module, ESP32-D0WD SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, external antenna, SMD"/>
+      <property name="ki_keywords" value="RF Radio BT ESP ESP32 Espressif external U.FL antenna"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>76f1c1ca-709b-46b2-9aef-1d6d953344b2</tstamps>
+    </comp>
+    <comp ref="GPS1">
+      <value>SAM-M8Q</value>
+      <footprint>RF_GPS:ublox_SAM-M8Q</footprint>
+      <datasheet>https://www.u-blox.com/sites/default/files/SAM-M8Q_DataSheet_%28UBX-16012619%29.pdf</datasheet>
+      <libsource lib="RF_GPS" part="SAM-M8Q" description="GPS ublox M8 variant"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="GPS ublox M8 variant"/>
+      <property name="ki_keywords" value="gps module with antenna"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5498db9-5686-4e8c-a87b-0dcd1e483d8e</tstamps>
+    </comp>
+    <comp ref="GY-271">
+      <value>Conn_01x05_Socket</value>
+      <footprint>mia_libreria:GY-271</footprint>
+      <libsource lib="Connector" part="Conn_01x05_Socket" description="Generic connector, single row, 01x05, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x05, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>68f65ac1-a5dd-4c6d-8cc7-65c86dc1b2d2</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>USB_C_Receptacle_PowerOnly_6P</value>
+      <footprint>Connector_USB:USB_C_Receptacle_GCT_USB4085</footprint>
+      <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
+      <libsource lib="Connector" part="USB_C_Receptacle_PowerOnly_6P" description="USB Power-Only 6P Type-C Receptacle connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="USB Power-Only 6P Type-C Receptacle connector"/>
+      <property name="ki_keywords" value="usb universal serial bus type-C power-only charging-only 6P 6C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>24ec3ae4-4c44-47eb-b02c-5255449fc812</tstamps>
+    </comp>
+    <comp ref="LCD1">
+      <value>Conn_01x05_Socket</value>
+      <footprint>mia_libreria:display_7_segm_4_digits</footprint>
+      <libsource lib="Connector" part="Conn_01x05_Socket" description="Generic connector, single row, 01x05, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x05, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f707cbed-6e0d-4c8d-897b-fb9be03c733d</tstamps>
+    </comp>
+    <comp ref="LED1">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e807af5-1e77-4716-950d-c3ef1c9ed295</tstamps>
+    </comp>
+    <comp ref="MAIN1">
+      <value>SW_SPDT</value>
+      <footprint>Button_Switch_SMD:SW_SPDT_PCM12</footprint>
+      <libsource lib="Switch" part="SW_SPDT" description="Switch, single pole double throw"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Switch, single pole double throw"/>
+      <property name="ki_keywords" value="switch single-pole double-throw spdt ON-ON"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0bd06fb4-ea87-4234-882d-5d12bb953d89</tstamps>
+    </comp>
+    <comp ref="microsd1">
+      <value>Micro_SD_Card</value>
+      <footprint>Connector_Card:microSD_HC_Hirose_DM3D-SF</footprint>
+      <datasheet>http://katalog.we-online.de/em/datasheet/693072010801.pdf</datasheet>
+      <libsource lib="Connector" part="Micro_SD_Card" description="Micro SD Card Socket"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Micro SD Card Socket"/>
+      <property name="ki_keywords" value="connector SD microsd"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cc5b9c18-2962-4ae6-8d59-15f20826b41d</tstamps>
+    </comp>
+    <comp ref="Oled1">
+      <value>Conn_01x04_Socket</value>
+      <footprint>mia_libreria:Display_i2c_128x64</footprint>
+      <libsource lib="Connector" part="Conn_01x04_Socket" description="Generic connector, single row, 01x04, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x04, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>411e544f-26c4-481e-a84a-2b10f50f6764</tstamps>
+    </comp>
+    <comp ref="Prog1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_SMD:SW_SPST_EVQPE1</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e121283a-17e1-49c8-8c4d-05c2b099cf30</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>MMBTA92</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/MMBTA92LT1-D.PDF</datasheet>
+      <libsource lib="Transistor_BJT" part="MMBTA92" description="0.5A Ic, 300V Vce, PNP High Voltage Transistor, SOT-23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="0.5A Ic, 300V Vce, PNP High Voltage Transistor, SOT-23"/>
+      <property name="ki_keywords" value="PNP High Voltage Transistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>26880c67-110f-412e-a71c-9b3976c0d7b7</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>100R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fe80aeff-2a96-4056-9fac-18515ed07d33</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>100R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>868bf045-f4c9-4601-8d41-cc751a6c34ba</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>5K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>290435fe-f0b0-4a88-aeef-8d6c4300701e</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>3,3K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>490bce63-e726-4f88-9bc9-816ef01aeb4b</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>301c2b8c-7db2-494b-90f1-bf7da1e4b952</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>R</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5edf7cf7-0ab3-4e87-989a-8ed080309181</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>5K1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>05b5e0ac-6ecc-4b92-a0b0-1436566d2d26</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>5K1</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d6eaa73-31cd-4020-ab5b-60612db550ff</tstamps>
+    </comp>
+    <comp ref="Serial1">
+      <value>Conn_01x03_Socket</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x03_Socket" description="Generic connector, single row, 01x03, script generated"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x03, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70eaaa94-bf59-4dab-8dcb-8032464128d2</tstamps>
+    </comp>
+    <comp ref="SWa1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ac173b4-3965-41a2-b5f6-2732fc92e4a0</tstamps>
+    </comp>
+    <comp ref="SWb1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>49885f58-8cdc-491a-8166-c4ec3cdee19b</tstamps>
+    </comp>
+    <comp ref="SWdown1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c698e1be-9f38-4274-82c7-655a3e788724</tstamps>
+    </comp>
+    <comp ref="SWleft1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>316c53e5-ecd5-4ab9-a17b-c3ea904b83c6</tstamps>
+    </comp>
+    <comp ref="SWright1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21884fd0-17e3-4757-bef7-8a5187e8328e</tstamps>
+    </comp>
+    <comp ref="SWup1">
+      <value>SW_SPST</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Single Pole Single Throw (SPST) switch"/>
+      <property name="ki_keywords" value="switch lever"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bfd6b031-cb74-463f-af53-9488ac7949dc</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MCP1700x-330xxTT</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="MCP1700x-330xxTT" description="250mA Low Quiscent Current LDO, 3.3V output, SOT-23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="250mA Low Quiscent Current LDO, 3.3V output, SOT-23"/>
+      <property name="ki_keywords" value="regulator linear ldo"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>604d9bd8-b3b8-4516-aa47-d06dbad62ac1</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>LTC4054ES5-4.2</value>
+      <footprint>Package_TO_SOT_SMD:TSOT-23-6_HandSoldering</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/1734fa.pdf</datasheet>
+      <libsource lib="mia_libreria" part="LTC1734ES6-4.2" description="Constant-current/constant-voltage linear charger for single cell lithium-ion batteries with 2.9V Trickle Charge, 4.5V to 6.5V VDD, -40 to +85 degree Celsius, TSOT-23-5"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="gps_compass.kicad_sch"/>
+      <property name="ki_description" value="Constant-current/constant-voltage linear charger for single cell lithium-ion batteries with 2.9V Trickle Charge, 4.5V to 6.5V VDD, -40 to +85 degree Celsius, TSOT-23-5"/>
+      <property name="ki_keywords" value="Constant-current constant-voltage linear charger single cell lithium-ion battery"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2a78de42-4c89-4035-983c-2cc412132ea7</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x03_Socket">
+      <description>Generic connector, single row, 01x03, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Socket</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x04_Socket">
+      <description>Generic connector, single row, 01x04, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Socket</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x05_Socket">
+      <description>Generic connector, single row, 01x05, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05_Socket</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Micro_SD_Card">
+      <description>Micro SD Card Socket</description>
+      <docs>http://katalog.we-online.de/em/datasheet/693072010801.pdf</docs>
+      <footprints>
+        <fp>microSD*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Micro_SD_Card</field>
+        <field name="Datasheet">http://katalog.we-online.de/em/datasheet/693072010801.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DAT2" type="bidirectional"/>
+        <pin num="2" name="DAT3/CD" type="bidirectional"/>
+        <pin num="3" name="CMD" type="input"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="VSS" type="power_in"/>
+        <pin num="7" name="DAT0" type="bidirectional"/>
+        <pin num="8" name="DAT1" type="bidirectional"/>
+        <pin num="9" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_C_Receptacle_PowerOnly_6P">
+      <description>USB Power-Only 6P Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_PowerOnly_6P</field>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+      </fields>
+      <pins>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="S1" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Battery_Cell">
+      <description>Single-cell battery</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery_Cell</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RF_GPS" part="SAM-M8Q">
+      <description>GPS ublox M8 variant</description>
+      <docs>https://www.u-blox.com/sites/default/files/SAM-M8Q_DataSheet_%28UBX-16012619%29.pdf</docs>
+      <footprints>
+        <fp>ublox*SAM?M8Q*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SAM-M8Q</field>
+        <field name="Footprint">RF_GPS:ublox_SAM-M8Q</field>
+        <field name="Datasheet">https://www.u-blox.com/sites/default/files/SAM-M8Q_DataSheet_%28UBX-16012619%29.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VCC_IO" type="power_in"/>
+        <pin num="3" name="V_BCKP" type="power_in"/>
+        <pin num="4" name="GND" type="passive"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="GND" type="passive"/>
+        <pin num="7" name="TIMEPULSE" type="output"/>
+        <pin num="8" name="~{SAFEBOOT}" type="input"/>
+        <pin num="9" name="SDA" type="bidirectional"/>
+        <pin num="10" name="GND" type="passive"/>
+        <pin num="11" name="GND" type="passive"/>
+        <pin num="12" name="SCL" type="input"/>
+        <pin num="13" name="TXD" type="output"/>
+        <pin num="14" name="RXD" type="input"/>
+        <pin num="15" name="GND" type="passive"/>
+        <pin num="16" name="GND" type="passive"/>
+        <pin num="17" name="VCC" type="power_in"/>
+        <pin num="18" name="~{RESET}" type="input"/>
+        <pin num="19" name="EXTINT" type="input"/>
+        <pin num="20" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RF_Module" part="ESP32-WROOM-32U">
+      <description>RF Module, ESP32-D0WD SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, external antenna, SMD</description>
+      <docs>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf</docs>
+      <footprints>
+        <fp>ESP32?WROOM?32U*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-WROOM-32U</field>
+        <field name="Footprint">RF_Module:ESP32-WROOM-32U</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="SENSOR_VP" type="input"/>
+        <pin num="5" name="SENSOR_VN" type="input"/>
+        <pin num="6" name="IO34" type="input"/>
+        <pin num="7" name="IO35" type="input"/>
+        <pin num="8" name="IO32" type="bidirectional"/>
+        <pin num="9" name="IO33" type="bidirectional"/>
+        <pin num="10" name="IO25" type="bidirectional"/>
+        <pin num="11" name="IO26" type="bidirectional"/>
+        <pin num="12" name="IO27" type="bidirectional"/>
+        <pin num="13" name="IO14" type="bidirectional"/>
+        <pin num="14" name="IO12" type="bidirectional"/>
+        <pin num="15" name="GND" type="passive"/>
+        <pin num="16" name="IO13" type="bidirectional"/>
+        <pin num="17" name="SHD/SD2" type="bidirectional"/>
+        <pin num="18" name="SWP/SD3" type="bidirectional"/>
+        <pin num="19" name="SCS/CMD" type="bidirectional"/>
+        <pin num="20" name="SCK/CLK" type="bidirectional"/>
+        <pin num="21" name="SDO/SD0" type="bidirectional"/>
+        <pin num="22" name="SDI/SD1" type="bidirectional"/>
+        <pin num="23" name="IO15" type="bidirectional"/>
+        <pin num="24" name="IO2" type="bidirectional"/>
+        <pin num="25" name="IO0" type="bidirectional"/>
+        <pin num="26" name="IO4" type="bidirectional"/>
+        <pin num="27" name="IO16" type="bidirectional"/>
+        <pin num="28" name="IO17" type="bidirectional"/>
+        <pin num="29" name="IO5" type="bidirectional"/>
+        <pin num="30" name="IO18" type="bidirectional"/>
+        <pin num="31" name="IO19" type="bidirectional"/>
+        <pin num="32" name="NC" type="no_connect"/>
+        <pin num="33" name="IO21" type="bidirectional"/>
+        <pin num="34" name="RXD0/IO3" type="bidirectional"/>
+        <pin num="35" name="TXD0/IO1" type="bidirectional"/>
+        <pin num="36" name="IO22" type="bidirectional"/>
+        <pin num="37" name="IO23" type="bidirectional"/>
+        <pin num="38" name="GND" type="passive"/>
+        <pin num="39" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="MCP1700x-330xxTT">
+      <description>250mA Low Quiscent Current LDO, 3.3V output, SOT-23</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP1700x-330xxTT</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPDT">
+      <description>Switch, single pole double throw</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPDT</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPST">
+      <description>Single Pole Single Throw (SPST) switch</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPST</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="MMBTA92">
+      <description>0.5A Ic, 300V Vce, PNP High Voltage Transistor, SOT-23</description>
+      <docs>https://www.onsemi.com/pub/Collateral/MMBTA92LT1-D.PDF</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MMBTA92</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/MMBTA92LT1-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="mia_libreria" part="LTC1734ES6-4.2">
+      <description>Constant-current/constant-voltage linear charger for single cell lithium-ion batteries with 2.9V Trickle Charge, 4.5V to 6.5V VDD, -40 to +85 degree Celsius, TSOT-23-5</description>
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/1734fa.pdf</docs>
+      <footprints>
+        <fp>TSOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LTC4054ES5-4.2</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TSOT-23-6</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/1734fa.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Isense" type="output"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VCC" type="power_in"/>
+        <pin num="4" name="Prog" type="bidirectional"/>
+        <pin num="5" name="BATT" type="power_out"/>
+        <pin num="6" name="DRIVE" type="output"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="RF_GPS">
+      <uri>/usr/share/kicad/symbols//RF_GPS.kicad_sym</uri>
+    </library>
+    <library logical="RF_Module">
+      <uri>/usr/share/kicad/symbols//RF_Module.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/usr/share/kicad/symbols//Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/usr/share/kicad/symbols//Switch.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/usr/share/kicad/symbols//Transistor_BJT.kicad_sym</uri>
+    </library>
+    <library logical="mia_libreria">
+      <uri>/home/dbarchetta/Scaricati/arduino-kicad-library-master/symbols/mia_libreria.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="ESP32" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="GPS1" pin="17" pinfunction="VCC" pintype="power_in"/>
+      <node ref="GPS1" pin="2" pinfunction="VCC_IO" pintype="power_in"/>
+      <node ref="GPS1" pin="3" pinfunction="V_BCKP" pintype="power_in"/>
+      <node ref="MAIN1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="B1">
+      <node ref="ESP32-S1" pin="24" pinfunction="IO2" pintype="bidirectional"/>
+      <node ref="SWup1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="3" name="B2">
+      <node ref="ESP32-S1" pin="26" pinfunction="IO4" pintype="bidirectional"/>
+      <node ref="SWdown1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="4" name="B3">
+      <node ref="ESP32-S1" pin="23" pinfunction="IO15" pintype="bidirectional"/>
+      <node ref="SWleft1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="5" name="B4">
+      <node ref="ESP32-S1" pin="10" pinfunction="IO25" pintype="bidirectional"/>
+      <node ref="SWright1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="6" name="B5">
+      <node ref="ESP32-S1" pin="11" pinfunction="IO26" pintype="bidirectional"/>
+      <node ref="SWa1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="7" name="B6">
+      <node ref="ESP32-S1" pin="12" pinfunction="IO27" pintype="bidirectional"/>
+      <node ref="SWb1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="8" name="CLK">
+      <node ref="ESP32-S1" pin="30" pinfunction="IO18" pintype="bidirectional"/>
+      <node ref="microsd1" pin="5" pinfunction="CLK" pintype="input"/>
+    </net>
+    <net code="9" name="CS">
+      <node ref="ESP32-S1" pin="29" pinfunction="IO5" pintype="bidirectional"/>
+      <node ref="microsd1" pin="2" pinfunction="DAT3/CD" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="GND">
+      <node ref="BT1" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="ESP32-S1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="ESP32-S1" pin="15" pinfunction="GND" pintype="passive"/>
+      <node ref="ESP32-S1" pin="38" pinfunction="GND" pintype="passive"/>
+      <node ref="ESP32-S1" pin="39" pinfunction="GND" pintype="passive"/>
+      <node ref="En1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="GPS1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="GPS1" pin="10" pinfunction="GND" pintype="passive"/>
+      <node ref="GPS1" pin="11" pinfunction="GND" pintype="passive"/>
+      <node ref="GPS1" pin="15" pinfunction="GND" pintype="passive"/>
+      <node ref="GPS1" pin="16" pinfunction="GND" pintype="passive"/>
+      <node ref="GPS1" pin="20" pinfunction="GND" pintype="passive"/>
+      <node ref="GPS1" pin="4" pinfunction="GND" pintype="passive"/>
+      <node ref="GPS1" pin="5" pinfunction="GND" pintype="passive"/>
+      <node ref="GPS1" pin="6" pinfunction="GND" pintype="passive"/>
+      <node ref="GY-271" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J1" pin="A12" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="B12" pinfunction="GND" pintype="passive"/>
+      <node ref="J1" pin="S1" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="LCD1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Oled1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Prog1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="SWa1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="SWb1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="SWdown1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="SWleft1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="SWright1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="SWup1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="Serial1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="microsd1" pin="6" pinfunction="VSS" pintype="power_in"/>
+      <node ref="microsd1" pin="9" pinfunction="SHIELD" pintype="passive"/>
+    </net>
+    <net code="11" name="MISO">
+      <node ref="ESP32-S1" pin="31" pinfunction="IO19" pintype="bidirectional"/>
+      <node ref="microsd1" pin="3" pinfunction="CMD" pintype="input"/>
+    </net>
+    <net code="12" name="MOSI">
+      <node ref="ESP32-S1" pin="37" pinfunction="IO23" pintype="bidirectional"/>
+      <node ref="microsd1" pin="7" pinfunction="DAT0" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="Net-(BT1-+)">
+      <node ref="BT1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VI" pintype="power_in"/>
+      <node ref="U3" pin="5" pinfunction="BATT" pintype="power_out"/>
+    </net>
+    <net code="14" name="Net-(ESP32-S1-EN)">
+      <node ref="ESP32-S1" pin="3" pinfunction="EN" pintype="input"/>
+      <node ref="En1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(ESP32-S1-IO0)">
+      <node ref="ESP32-S1" pin="25" pinfunction="IO0" pintype="bidirectional"/>
+      <node ref="Prog1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(ESP32-S1-IO32)">
+      <node ref="ESP32-S1" pin="8" pinfunction="IO32" pintype="bidirectional"/>
+      <node ref="LED1" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(ESP32-S1-RXD0{slash}IO3)">
+      <node ref="ESP32-S1" pin="34" pinfunction="RXD0/IO3" pintype="bidirectional"/>
+      <node ref="Serial1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(ESP32-S1-TXD0{slash}IO1)">
+      <node ref="ESP32-S1" pin="35" pinfunction="TXD0/IO1" pintype="bidirectional"/>
+      <node ref="Serial1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(GPS1-RXD)">
+      <node ref="GPS1" pin="14" pinfunction="RXD" pintype="input"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(GPS1-TXD)">
+      <node ref="GPS1" pin="13" pinfunction="TXD" pintype="output"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(GPS1-~{RESET})">
+      <node ref="GPS1" pin="18" pinfunction="~{RESET}" pintype="input"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(J1-CC1)">
+      <node ref="J1" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(J1-CC2)">
+      <node ref="J1" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(LED1-K)">
+      <node ref="LED1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(MAIN1-B)">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="MAIN1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="26" name="Net-(Q1-B)">
+      <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="U3" pin="6" pinfunction="DRIVE" pintype="output"/>
+    </net>
+    <net code="27" name="Net-(Q1-E)">
+      <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="Isense" pintype="output"/>
+    </net>
+    <net code="28" name="Net-(U3-Prog)">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="Prog" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="Net-(U3-VCC)">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="A9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J1" pin="B9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="30" name="RX2">
+      <node ref="ESP32-S1" pin="27" pinfunction="IO16" pintype="bidirectional"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="31" name="SCL">
+      <node ref="ESP32-S1" pin="36" pinfunction="IO22" pintype="bidirectional"/>
+      <node ref="GPS1" pin="12" pinfunction="SCL" pintype="input"/>
+      <node ref="GY-271" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="Oled1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="32" name="SDA">
+      <node ref="ESP32-S1" pin="33" pinfunction="IO21" pintype="bidirectional"/>
+      <node ref="GPS1" pin="9" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="GY-271" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="Oled1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="33" name="TX2">
+      <node ref="ESP32-S1" pin="28" pinfunction="IO17" pintype="bidirectional"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="34" name="VCC">
+      <node ref="ESP32" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="ESP32-S1" pin="2" pinfunction="VDD" pintype="power_in"/>
+      <node ref="GY-271" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="LCD1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="Oled1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="microsd1" pin="4" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="35" name="lcd_cs">
+      <node ref="ESP32-S1" pin="14" pinfunction="IO12" pintype="bidirectional"/>
+      <node ref="LCD1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="36" name="lcd_data">
+      <node ref="ESP32-S1" pin="13" pinfunction="IO14" pintype="bidirectional"/>
+      <node ref="LCD1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="37" name="lcd_wr">
+      <node ref="ESP32-S1" pin="16" pinfunction="IO13" pintype="bidirectional"/>
+      <node ref="LCD1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="38" name="unconnected-(ESP32-C-Pad3)">
+      <node ref="ESP32" pin="3" pinfunction="C" pintype="passive+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(ESP32-S1-IO33-Pad9)">
+      <node ref="ESP32-S1" pin="9" pinfunction="IO33" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(ESP32-S1-IO34-Pad6)">
+      <node ref="ESP32-S1" pin="6" pinfunction="IO34" pintype="input+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(ESP32-S1-IO35-Pad7)">
+      <node ref="ESP32-S1" pin="7" pinfunction="IO35" pintype="input+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(ESP32-S1-NC-Pad32)">
+      <node ref="ESP32-S1" pin="32" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(ESP32-S1-SCK{slash}CLK-Pad20)">
+      <node ref="ESP32-S1" pin="20" pinfunction="SCK/CLK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(ESP32-S1-SCS{slash}CMD-Pad19)">
+      <node ref="ESP32-S1" pin="19" pinfunction="SCS/CMD" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(ESP32-S1-SDI{slash}SD1-Pad22)">
+      <node ref="ESP32-S1" pin="22" pinfunction="SDI/SD1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(ESP32-S1-SDO{slash}SD0-Pad21)">
+      <node ref="ESP32-S1" pin="21" pinfunction="SDO/SD0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(ESP32-S1-SENSOR_VN-Pad5)">
+      <node ref="ESP32-S1" pin="5" pinfunction="SENSOR_VN" pintype="input+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(ESP32-S1-SENSOR_VP-Pad4)">
+      <node ref="ESP32-S1" pin="4" pinfunction="SENSOR_VP" pintype="input+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(ESP32-S1-SHD{slash}SD2-Pad17)">
+      <node ref="ESP32-S1" pin="17" pinfunction="SHD/SD2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(ESP32-S1-SWP{slash}SD3-Pad18)">
+      <node ref="ESP32-S1" pin="18" pinfunction="SWP/SD3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(GPS1-EXTINT-Pad19)">
+      <node ref="GPS1" pin="19" pinfunction="EXTINT" pintype="input+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(GPS1-TIMEPULSE-Pad7)">
+      <node ref="GPS1" pin="7" pinfunction="TIMEPULSE" pintype="output+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(GPS1-~{SAFEBOOT}-Pad8)">
+      <node ref="GPS1" pin="8" pinfunction="~{SAFEBOOT}" pintype="input+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(GY-271-Pin_5-Pad5)">
+      <node ref="GY-271" pin="5" pinfunction="Pin_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(MAIN1-C-Pad3)">
+      <node ref="MAIN1" pin="3" pinfunction="C" pintype="passive+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(microsd1-DAT1-Pad8)">
+      <node ref="microsd1" pin="8" pinfunction="DAT1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(microsd1-DAT2-Pad1)">
+      <node ref="microsd1" pin="1" pinfunction="DAT2" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>
