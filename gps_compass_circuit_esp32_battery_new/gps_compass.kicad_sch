@@ -4017,10 +4017,10 @@
   (symbol (lib_id "Connector:Conn_01x03_Socket") (at 269.24 54.61 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 70eaaa94-bf59-4dab-8dcb-8032464128d2)
-    (property "Reference" "Serial1" (at 270.51 55.88 0)
+    (property "Reference" "Serial1" (at 271.78 50.8 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Conn_01x03_Socket" (at 270.51 53.34 0)
+    (property "Value" "Conn_01x03_Socket" (at 274.32 50.8 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" (at 269.24 54.61 0)
@@ -4029,9 +4029,9 @@
     (property "Datasheet" "~" (at 269.24 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5025cbf8-6862-49b3-a6d9-2201e208d5c8))
-    (pin "2" (uuid c441f977-b47c-493e-bce2-d9710b124f0f))
-    (pin "3" (uuid a4d7763e-2559-4fd6-b20b-658189ad29a6))
+    (pin "1" (uuid c93f1883-5dd5-4b67-afa8-35a1b5ff4baa))
+    (pin "2" (uuid 0a3b9334-1559-4828-81ef-e4f7a2a66b4d))
+    (pin "3" (uuid 12c00781-b918-4a2e-8de9-20f7400c49d9))
     (instances
       (project "gps_compass"
         (path "/a4fcd873-6be1-41e0-859b-a9c60ce59508"
