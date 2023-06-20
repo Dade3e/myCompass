@@ -485,26 +485,6 @@
     [
       "a4fcd873-6be1-41e0-859b-a9c60ce59508",
       ""
-    ],
-    [
-      "672cc2b9-6dc4-44d3-85c3-8d68ae317e11",
-      "Display"
-    ],
-    [
-      "1e53fc31-6b26-4da1-9069-056d8f93658a",
-      "GPSeCompass"
-    ],
-    [
-      "6566b710-0e58-4afb-a9fb-101ea90703bb",
-      "Periferiche"
-    ],
-    [
-      "087b627b-351a-4ffe-82d4-e19b159e913a",
-      "ATMEGA328"
-    ],
-    [
-      "86dd57df-c8f7-440f-975d-3cfdd6cf060e",
-      "power"
     ]
   ],
   "text_variables": {}
