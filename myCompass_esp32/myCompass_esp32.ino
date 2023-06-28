@@ -18,9 +18,12 @@ int c = 0;
 
 bool calibrated = false;
 
-const byte SWITCHR = 25; // pin 3 / PCINT4
-const byte SWITCHL = 26; // pin 3 / PCINT4
-
+const byte UP = 2;
+const byte DOWN = 4;
+const byte LEFT = 15;
+const byte RIGHT = 25;
+const byte A = 26;
+const byte B = 27;
 //casa Mels 46.17725965253064, 13.11714012444914
 //casa Trieste 45.63081080068116, 13.790185568089802
 
@@ -368,9 +371,12 @@ void setup() {
 
   Serial2.begin(GPSBaud);
   
-  pinMode (SWITCHL, INPUT_PULLUP);
-
-  pinMode (SWITCHR, INPUT_PULLUP);
+  pinMode(UP, INPUT_PULLUP);
+  pinMode(DOWN, INPUT_PULLUP);
+  pinMode(LEFT, INPUT_PULLUP);
+  pinMode(RIGHT, INPUT_PULLUP);
+  pinMode(A, INPUT_PULLUP);
+  pinMode(B, INPUT_PULLUP);
 
   pinMode(CS, OUTPUT);
   pinMode(WR, OUTPUT);
@@ -415,16 +421,16 @@ void loop() {
     if (gps.encode(Serial2.read()))
   
   if(gps.location.isValid()){
-    if(digitalRead(SWITCHR) == LOW){
+    if(digitalRead(RIGHT) == LOW){
       showCourse += 1;
       if(showCourse == 3)
         showCourse = 0;
     }
-    while(digitalRead(SWITCHR) == LOW);
-    if(digitalRead(SWITCHL) == LOW){
+    while(digitalRead(RIGHT) == LOW);
+    if(digitalRead(LEFT) == LOW){
       menu();
     }
-    while(digitalRead(SWITCHL) == LOW);
+    while(digitalRead(LEFT) == LOW);
     if(showCourse == 0){
       double gpsCourse = TinyGPSPlus::courseTo(gps.location.lat(), gps.location.lng(), TARGET_COORDS[s_coords][0], TARGET_COORDS[s_coords][1]);
       compass.read();
@@ -446,10 +452,10 @@ void loop() {
     }
   }else{
     Serial.println("Attesa gps");
-    if(digitalRead(SWITCHL) == LOW){
+    if(digitalRead(LEFT) == LOW){
       menu();
     }
-    while(digitalRead(SWITCHR) == LOW && digitalRead(SWITCHL) == LOW){delay(10);}
+    while(digitalRead(RIGHT) == LOW && digitalRead(LEFT) == LOW){delay(10);}
     draw(wait2[i],0x3E,0x73,0x5E);
     i++;
     if(i == 18)
@@ -469,13 +475,13 @@ void menu(){
   int text_vel = 4;
   while(select != 99){
     
-    if(digitalRead(SWITCHL) == LOW){
+    if(digitalRead(LEFT) == LOW){
       select += 1;
       wait = 0;
       i = 2;      
     }
       
-    while(digitalRead(SWITCHL) == LOW);
+    while(digitalRead(LEFT) == LOW);
 
     switch(select){
       case(1):
@@ -485,9 +491,9 @@ void menu(){
           wait = 0;
           i++;          
         }
-        if(digitalRead(SWITCHR) == LOW)
+        if(digitalRead(RIGHT) == LOW)
           select = 10;
-        while(digitalRead(SWITCHR) == LOW);
+        while(digitalRead(RIGHT) == LOW);
       break;
       case(2):
       case(4):
@@ -502,15 +508,15 @@ void menu(){
           wait = 0;
           i++;          
         }
-        if(digitalRead(SWITCHR) == LOW)
+        if(digitalRead(RIGHT) == LOW)
           select = 11;
-        while(digitalRead(SWITCHR) == LOW);
+        while(digitalRead(RIGHT) == LOW);
       break;
       case(5):
         draw_s("EXIT");
-        if(digitalRead(SWITCHR) == LOW)
+        if(digitalRead(RIGHT) == LOW)
           select = 99;
-        while(digitalRead(SWITCHR) == LOW);
+        while(digitalRead(RIGHT) == LOW);
       break;
       case(10):
         select_coords();
@@ -539,14 +545,14 @@ void select_coords(){
   uint8_t select = s_coords;
   int i = 2;
   int wait = 0;
-  while(digitalRead(SWITCHR) == HIGH){
-    if(digitalRead(SWITCHL) == LOW){
+  while(digitalRead(RIGHT) == HIGH){
+    if(digitalRead(LEFT) == LOW){
       select += 1;
       i = 2;
       wait = 0;
     }
       
-    while(digitalRead(SWITCHL) == LOW);
+    while(digitalRead(LEFT) == LOW);
     if(select >= (sizeof(TARGET_NAME) / sizeof(TARGET_NAME[0])))
       select = 0;
     i = draw_scroll(TARGET_NAME[select], i);

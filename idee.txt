@@ -7,3 +7,9 @@ ATMEGA328P: https://www.digikey.it/it/products/detail/microchip-technology/ATMEG
 ALTRO POSSIBILE DISPLAY: https://www.digikey.it/it/products/detail/focus-lcds/G132CLGFGSW6WTCCXAL/12691213
 POSSIBILE BUSSOLA: https://www.digikey.it/it/products/detail/stmicroelectronics/LSM303AGRTR/6006100
 
+
+
+SAM-M10Q
+https://content.u-blox.com/sites/default/files/u-blox-M10-SPG-5.10_InterfaceDescription_UBX-21035062.pdf
+https://content.u-blox.com/sites/default/files/documents/SAM-M10Q_IntegrationManual_UBX-22020019.pdf
+https://github.com/semuconsulting/PyGPSClient
