@@ -16,6 +16,8 @@ const byte RIGHT = 25;
 const byte A = 26;
 const byte B = 27;
 
+const byte battery = 33;
+
 
 // the setup routine runs once when you press reset:
 void setup() {
@@ -27,13 +29,14 @@ void setup() {
   pinMode(RIGHT, INPUT_PULLUP);
   pinMode(A, INPUT_PULLUP);
   pinMode(B, INPUT_PULLUP);
+  pinMode(battery, INPUT);
 }
 
 // the loop routine runs over and over again forever:
 void loop() {
   // read the input on analog pin 0:
   // print out the value you read:
-  Serial.println("Up  Down  Left  right  A  B");
+  Serial.println("Up  Down  Left  right  A  B  Battery");
   Serial.print(" ");
   Serial.print(digitalRead(UP));
   Serial.print("   ");
@@ -46,6 +49,8 @@ void loop() {
   Serial.print(digitalRead(A));
   Serial.print("  ");
   Serial.print(digitalRead(B));
+  Serial.print("    ");
+  Serial.print(analogRead(battery));
   Serial.println();
   Serial.println();
   delay(100);  // delay in between reads for stability
