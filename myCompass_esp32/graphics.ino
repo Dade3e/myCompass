@@ -188,3 +188,33 @@ void draw_arrow(int line){
   display.fillTriangle(x,y,x1,y1,x2,y2, SSD1306_INVERSE);
   display.display();
 }
+
+//set contrast
+void setContrast(){
+  int exit = true;
+  while(exit){
+    display.clearDisplay();
+    display.fillRoundRect(0, 64-(cont/4), 16, (cont/4), 3, SSD1306_WHITE);
+    display.drawRoundRect(0, 0, 16, display.height(), 3, SSD1306_WHITE);
+    
+    display.setTextSize(1);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(36, 20);
+    display.println("Set contrast");
+    display.display();
+    if(digitalRead(UP) == LOW)
+      cont += 20;
+    if(digitalRead(DOWN) == LOW)
+      cont -= 20;
+    if(digitalRead(A) == LOW || digitalRead(B) == LOW)
+      exit = false;
+    if(cont < 1)
+      cont = 1;
+    if(cont > 255)
+      cont = 255;
+    display.ssd1306_command(0x81);
+    display.ssd1306_command(cont);
+    Serial.println(cont);
+    delay(100);
+  }
+}
