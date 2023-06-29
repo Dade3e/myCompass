@@ -20,6 +20,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 int x = 5;
 int y = 3;
+int w = 0;
+int selected = 0;
 String testo = "";
 int maiusc = 0;
 String keys[] = { "0 1 2 3 4 5 6 7 8 9 <",
@@ -31,10 +33,10 @@ String keysM[] = { "0 1 2 3 4 5 6 7 8 9 <",
                   ". A S D F G H J K L -",
                   "^ Z X C V   B N M END"};
 
-
+String menu_list[] = {"Walk", "Select point", "Save Point", "Calib", "Settings"};
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   pinMode(UP, INPUT_PULLUP);
   pinMode(DOWN, INPUT_PULLUP);
@@ -48,17 +50,128 @@ void setup() {
     for(;;);
   }
   display.setRotation(2);
+  display.ssd1306_command(0x81);
+  display.ssd1306_command(127);
 }
 
+
 void loop() {
-  
+  setContrast();
+  while(digitalRead(A) == LOW);
+  while(digitalRead(B) == LOW);
   Serial.println(keyboard());
+  while(digitalRead(A) == LOW);
+  while(digitalRead(B) == LOW);
   mainWindow("Destinazione", 270 , 1980);
   while(digitalRead(A) == LOW);
   while(digitalRead(B) == LOW);
+  Menu();
+  while(digitalRead(A) == LOW);
+  while(digitalRead(B) == LOW);
+  
   delay(50);
 }
 
+int cont = 128;
+void setContrast(){
+  int exit = true;
+  while(exit){
+    display.clearDisplay();
+    display.fillRoundRect(0, 64-(cont/4), 16, (cont/4), 3, SSD1306_WHITE);
+    display.drawRoundRect(0, 0, 16, display.height(), 3, SSD1306_WHITE);
+    
+    display.setTextSize(1);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(36, 20);
+    display.println("Set contrast");
+    display.display();
+    if(digitalRead(UP) == LOW)
+      cont += 20;
+    if(digitalRead(DOWN) == LOW)
+      cont -= 20;
+    if(digitalRead(A) == LOW || digitalRead(B) == LOW)
+      exit = false;
+    if(cont < 1)
+      cont = 1;
+    if(cont > 255)
+      cont = 255;
+    display.ssd1306_command(0x81);
+    display.ssd1306_command(cont);
+    Serial.println(cont);
+    delay(100);
+  }
+}
+//Menu
+
+void Menu(){
+  int exit = true;
+  int max = (sizeof(menu_list) / sizeof(menu_list[0]));
+  while(exit){
+
+    if(digitalRead(UP) == LOW){
+      w -= 1;
+      if(w < 0){
+        selected --;
+        w = 0;
+      }
+      
+    }
+    if(digitalRead(DOWN) == LOW){
+      w += 1;
+      if(w > 3){
+        selected ++;
+        w = 3;
+      }
+    }
+      
+    
+    if(selected < 0){
+      w = 3;
+      selected = max - 4;
+    }
+      
+      
+    
+    if(selected >= max - 3){
+      selected = 0;
+      w = 0;
+    }
+      
+      
+    if(digitalRead(A) == LOW){
+      exit = false;
+    }
+    if(digitalRead(B) == LOW){
+      exit = false;
+      w = 0;
+    }
+    while(digitalRead(A) == LOW);
+    while(digitalRead(B) == LOW);
+
+    display.clearDisplay();
+
+    //display.drawRoundRect(0, 0, 16, display.height(), 3, SSD1306_WHITE);
+    display.setTextSize(2);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(4, 0);
+    display.println("M");
+    display.setCursor(4, 16);
+    display.println("E");
+    display.setCursor(4, 32);
+    display.println("N");
+    display.setCursor(4, 48);
+    display.println("U");
+    display.setTextSize(1);
+    display.drawRoundRect(20, w*16, 106, 14, 3, SSD1306_WHITE);
+    for(int i = 0; i<4; i++){
+      display.setCursor(24, 16*i + 4);
+      display.println(menu_list[selected + i]);
+    }
+    display.display();
+    delay(100);
+  }
+  Serial.println(w);
+}
 
 //KEYBOARD
 String keyboard(){
@@ -149,6 +262,7 @@ String keyboard(){
   }
   return testo;
 }
+
 
 
 const float pi = 3.14159267 ;

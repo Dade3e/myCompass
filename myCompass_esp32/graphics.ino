@@ -88,7 +88,58 @@ String keyboard(){
   return testo;
 }
 
+//MENU
+//Menu
 
+void Menu(){
+  int exit = true;
+  while(exit){
+
+    if(digitalRead(UP) == LOW)
+      w -= 1;
+    if(digitalRead(DOWN) == LOW)
+      w += 1;
+    if(w < 0)
+      w = 3;
+    if(w > 3)
+      w = 0;
+    if(digitalRead(A) == LOW){
+      exit = false;
+    }
+    if(digitalRead(B) == LOW){
+      exit = false;
+      w = 0;
+    }
+    while(digitalRead(A) == LOW);
+    while(digitalRead(B) == LOW);
+
+    display.clearDisplay();
+
+    //display.drawRoundRect(0, 0, 16, display.height(), 3, SSD1306_WHITE);
+    display.setTextSize(2);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(4, 0);
+    display.println("M");
+    display.setCursor(4, 16);
+    display.println("E");
+    display.setCursor(4, 32);
+    display.println("N");
+    display.setCursor(4, 48);
+    display.println("U");
+    display.setTextSize(1);
+    display.drawRoundRect(20, w*16, 106, 14, 3, SSD1306_WHITE);
+    for(int i = 0; i<4; i++){
+      display.setCursor(24, 16*i + 4);
+      display.println(menu_list[i]);
+    }
+    display.display();
+    delay(100);
+  }
+  Serial.println(w);
+}
+
+
+//WALK
 void mainWindow(String dest, int azimuth ,int dist){
   display.clearDisplay();
   display.setTextColor(SSD1306_WHITE);

@@ -44,6 +44,7 @@ String TARGET_NAME = "";
 //keyboard
 int x = 5;
 int y = 3;
+int w = 0;
 String testo = "";
 int maiusc = 0;
 String keys[] = { "0 1 2 3 4 5 6 7 8 9 <",
@@ -55,6 +56,7 @@ String keysM[] = { "0 1 2 3 4 5 6 7 8 9 <",
                   ". A S D F G H J K L -",
                   "^ Z X C V   B N M END"};
 
+String menu_list[] = {"Walk", "Select point", "Save Point", "Calib"};
 
 //Arrow
 const float pi = 3.14159267 ;
