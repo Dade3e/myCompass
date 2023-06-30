@@ -208,7 +208,15 @@ void SavePoint(){
         appendFile(SD,"/coords.txt", abcd.c_str());    
       }
     }
+  }else{
+    String nome = keyboard("");
+    if(nome != ""){
+      String abcd = nome + "," + now_lat + "," + now_lng+"\n";
+      Serial.println(abcd.c_str());
+      appendFile(SD,"/coords.txt", abcd.c_str());    
+    }
   }
+  
   while(digitalRead(A) == LOW);
   while(digitalRead(B) == LOW);
 }
