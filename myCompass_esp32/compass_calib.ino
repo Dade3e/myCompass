@@ -43,6 +43,9 @@ bool compassCalib(){
     if (changed && !done) {
       Serial.println("CALIBRATING... Keep moving your sensor around.");
       c = millis();
+      CompassAnimation( calibrationData[0][0],calibrationData[0][1],
+                        calibrationData[1][0],calibrationData[1][1],
+                        calibrationData[2][0],calibrationData[2][1] );
     }
     t = millis();
 

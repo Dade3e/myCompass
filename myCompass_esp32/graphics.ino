@@ -549,3 +549,32 @@ int InvalidPoint(){
   return 0;
 }
 
+void CompassAnimation(int xm, int xM, int ym, int yM, int zm, int zM){
+  display.clearDisplay();
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(1, 0);
+  display.println("Compass Calibration");
+  display.setCursor(6, 16);
+  display.println("x");
+  display.setCursor(6, 32);
+  display.println("y");
+  display.setCursor(6, 48);
+  display.println("z");
+
+  display.setCursor(34, 16);
+  display.println(xm);
+  display.setCursor(34, 32);
+  display.println(ym);
+  display.setCursor(34, 48);
+  display.println(zm);
+
+  display.setCursor(78, 16);
+  display.println(xM);
+  display.setCursor(78, 32);
+  display.println(yM);
+  display.setCursor(78, 48);
+  display.println(zM);
+  display.display();
+  
+}
+
