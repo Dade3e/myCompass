@@ -101,9 +101,7 @@ void setup() {
     Serial.println(F("SSD1306 allocation failed"));
     for(;;);
   }
-  display.setRotation(2);
-  display.ssd1306_command(0x81);
-  display.ssd1306_command(brigh);
+  
 
   String index = readFileString(SD, "/index.txt");
   TARGET_NAME = split(index, ',', 1);
@@ -113,6 +111,10 @@ void setup() {
 
   s_coords = split(index, ',', 0).toDouble();
   brigh  = split(index, ',', 4).toInt();
+
+  display.setRotation(2);
+  display.ssd1306_command(0x81);
+  display.ssd1306_command(brigh);
 
 
   Start(TARGET_NAME);
@@ -154,6 +156,7 @@ void loop() {
       now_lng = gps.location.lng();
     }
     else{
+      battery_level = (analogRead(battery) * 0.0007) + 1.418;
       //Serial.print("Attesa gps, satelliti: ");
       //Serial.println(gps.satellites.value());
       waitFix(gps.satellites.value());

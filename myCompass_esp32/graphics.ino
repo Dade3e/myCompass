@@ -363,6 +363,8 @@ int SelectPoint(){
     String abc = ("1,"+ TARGET_NAME +','+ split(salva, ',', 1) +','+ split(salva, ',', 2) +','+ String(brigh));
     Serial.println(abc.c_str());
     writeFile(SD, "/index.txt", abc.c_str());
+    Start(TARGET_NAME);
+    delay(1000);
     return 1;
   }
   if(s == 2){
@@ -379,8 +381,6 @@ void Walk(String dest, int azimuth ,int dist, int sat){
   display.clearDisplay();
   display.setTextColor(SSD1306_WHITE);
 
-
-
   display.setTextSize(1);
   display.setCursor(1, 0);
   display.println(dest);
@@ -391,8 +391,13 @@ void Walk(String dest, int azimuth ,int dist, int sat){
 
   display.setTextSize(1);
   display.setCursor(1, 54);
-  display.print(dist);
-  display.println(" m");
+  if(dist > 9999){
+    display.print(dist/1000);
+    display.println(" Km");
+  }else{
+    display.print(dist);
+    display.println(" m");
+  }
 
   display.setTextSize(1);
   display.setCursor(86, 54);
@@ -400,7 +405,7 @@ void Walk(String dest, int azimuth ,int dist, int sat){
   display.println(sat);
 
   display.setTextSize(1);
-  display.setCursor(86, 0);
+  display.setCursor(96, 0);
   display.println(battery_level);
   
 
@@ -502,6 +507,7 @@ void waitFix(int sat){
   next_image ++;
   if (next_image > 8)
     next_image = 0;
+  
   display.setTextSize(1);
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(36, 20);
@@ -509,6 +515,8 @@ void waitFix(int sat){
   display.setCursor(36, 34);
   display.print("satellites: ");
   display.println(sat);
+  display.setCursor(96, 0);
+  display.println(battery_level);
   display.display();
 }
 

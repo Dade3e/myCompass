@@ -1,5 +1,8 @@
 bool compassCalib(){
-  while(calibrated == false){
+  int annulla = false;
+  while(calibrated == false && annulla == false){
+    if(digitalRead(B) == LOW)
+      annulla = true;
     // If not calibrated
     int x, y, z;
 
@@ -74,13 +77,18 @@ bool compassCalib(){
       calibrated = true;
     }
   }
+  
   calibrated = false;
-  String str_calib =  String(calibrationData[0][0]) +"\n"+ 
+  if(annulla == false){
+    String str_calib =  String(calibrationData[0][0]) +"\n"+ 
                       String(calibrationData[0][1]) +"\n"+ 
                       String(calibrationData[1][0]) +"\n"+ 
                       String(calibrationData[1][1]) +"\n"+ 
                       String(calibrationData[2][0]) +"\n"+ 
                       String(calibrationData[2][1]) +"\n";
 
-  return writeFile(SD, "/calib.txt", str_calib.c_str());
+    return writeFile(SD, "/calib.txt", str_calib.c_str());
+  }
+  return 0;
+  
 }
