@@ -43,10 +43,6 @@ bool compassCalib(){
     if (changed && !done) {
       Serial.println("CALIBRATING... Keep moving your sensor around.");
       c = millis();
-      draw(wait[i],0x36,0x34,0x7F);
-      i++;
-      if(i == 8)
-        i = 0;
     }
     t = millis();
 
@@ -83,5 +79,5 @@ bool compassCalib(){
                       String(calibrationData[2][0]) +"\n"+ 
                       String(calibrationData[2][1]) +"\n";
 
-  return writeFile(SD, "/calib.txt", str_calib)
+  return writeFile(SD, "/calib.txt", str_calib.c_str());
 }

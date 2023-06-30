@@ -16,8 +16,7 @@ String readFileString(fs::FS &fs, const char * path){
   return text;
 }
 
-void readFile(fs::FS &fs, const char * path){
-  double index = 0;
+void readFileLine(fs::FS &fs, const char * path){
   Serial.printf("Reading file: %s\n", path);
 
   File file = fs.open(path);
@@ -33,39 +32,11 @@ void readFile(fs::FS &fs, const char * path){
     if(c == '\n'){
       Serial.println(line);
       line = "";
-      index ++;
     }else{
       line += c;
     }
   }
   file.close();
-}
-
-String readIndex(fs::FS &fs, const char * path){
-  double index = 0;
-  Serial.printf("Reading file: %s\n", path);
-
-  File file = fs.open(path);
-  if(!file){
-    Serial.println("Failed to open file for reading");
-    return "0,ERROR,0,0";
-  }
-
-  Serial.println("Read from file: ");
-  String line = "";
-  while(file.available()){
-    char c = file.read();
-    if(c == '\n'){
-      file.close();
-      return (line);
-      line = "";
-      index ++;
-    }else{
-      line += c;
-    }
-  }
-  file.close();
-  return "0,ZERO,0,0";
 }
 
 String split(String My_S, char split, int n_part){
@@ -75,7 +46,7 @@ String split(String My_S, char split, int n_part){
     if(char(sub_S[i]) == split)
       elementi ++;
   }
-  for(int i = 0; i < elementi;i++){
+  for(int i = 0; i <= elementi;i++){
     int index = sub_S.indexOf(split);
     String new_s = sub_S.substring(0,index);
     if(i == n_part)

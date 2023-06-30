@@ -3,7 +3,7 @@
 #include "SPI.h"
 
 
-void readFile(fs::FS &fs, const char * path){
+void readFileLine(fs::FS &fs, const char * path){
   Serial.printf("Reading file: %s\n", path);
 
   File file = fs.open(path);
@@ -111,7 +111,7 @@ String split(String My_S, char split, int n_part){
     if(char(sub_S[i]) == split)
       elementi ++;
   }
-  for(int i = 0; i < elementi;i++){
+  for(int i = 0; i <= elementi;i++){
     int index = sub_S.indexOf(split);
     String new_s = sub_S.substring(0,index);
     if(i == n_part)
@@ -159,7 +159,11 @@ void setup(){
   Serial.println(calib);
   Serial.println(split(calib, '\n', 0).toInt());
   String index = readIndex(SD, "/index.txt");
+  Serial.println(index);
   Serial.println(split(index, ',', 0));
+  Serial.println(split(index, ',', 1));
+  Serial.println(split(index, ',', 2));
+  Serial.println(split(index, ',', 3));
   
 }
 

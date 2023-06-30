@@ -36,7 +36,7 @@ void setup() {
 void loop() {
   // read the input on analog pin 0:
   // print out the value you read:
-  Serial.println("Up  Down  Left  right  A  B  Battery");
+  Serial.println("Up  Down  Left  right  A  B  Battery V");
   Serial.print(" ");
   Serial.print(digitalRead(UP));
   Serial.print("   ");
@@ -51,6 +51,8 @@ void loop() {
   Serial.print(digitalRead(B));
   Serial.print("    ");
   Serial.print(analogRead(battery));
+  Serial.print("  ");
+  Serial.print((analogRead(battery) * 0.0007) + 1.418);
   Serial.println();
   Serial.println();
   delay(100);  // delay in between reads for stability
