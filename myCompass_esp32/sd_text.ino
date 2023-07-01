@@ -13,6 +13,7 @@ String readFileString(fs::FS &fs, const char * path){
     text += char(file.read());
   }
   file.close();
+  Serial.println(text);
   return text;
 }
 

@@ -190,8 +190,8 @@ int Menu(){
     display.println(menu_list[selected + i]);
   }
   display.display();
-  while(digitalRead(A) == LOW){delay(100);};
-  while(digitalRead(B) == LOW){delay(100);};
+  while(digitalRead(A) == LOW);
+  while(digitalRead(B) == LOW);
   delay(100);
   int max = (sizeof(menu_list) / sizeof(menu_list[0]));
   while(exit){
@@ -524,12 +524,24 @@ void Start(String dest){
   display.clearDisplay();
   
   display.setTextSize(1);
-  display.drawBitmap(52, 0, gps_wait, 24, 32, WHITE);
+  display.drawBitmap(52, 6, gps_wait, 24, 32, WHITE);
   display.setTextColor(SSD1306_WHITE);
   int len = dest.length();
   int x_text = (128-(len*6)) /2;
   display.setCursor(x_text, 48);
   display.print(dest);
+  display.display();
+}
+
+void SDerror(){
+  display.clearDisplay();
+  String sd = "SD mount failed";
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  int len = sd.length();
+  int x_text = (128-(len*6)) /2;
+  display.setCursor(x_text, 24);
+  display.print(sd);
   display.display();
 }
 
@@ -562,26 +574,32 @@ void CompassAnimation(int xm, int xM, int ym, int yM, int zm, int zM){
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(1, 0);
   display.println("Compass Calibration");
-  display.setCursor(6, 16);
+  display.setCursor(6, 12);
   display.println("x");
-  display.setCursor(6, 32);
+  display.setCursor(6, 24);
   display.println("y");
-  display.setCursor(6, 48);
+  display.setCursor(6, 36);
   display.println("z");
 
-  display.setCursor(34, 16);
+  display.setCursor(34, 12);
   display.println(xm);
-  display.setCursor(34, 32);
+  display.setCursor(34, 24);
   display.println(ym);
-  display.setCursor(34, 48);
+  display.setCursor(34, 36);
   display.println(zm);
 
-  display.setCursor(78, 16);
+  display.setCursor(78, 12);
   display.println(xM);
-  display.setCursor(78, 32);
+  display.setCursor(78, 24);
   display.println(yM);
-  display.setCursor(78, 48);
+  display.setCursor(78, 36);
   display.println(zM);
+
+  display.setCursor(1, 48);
+  display.println("A: Default Calib");
+
+  display.setCursor(1, 56);
+  display.println("B: Back");
   display.display();
   
 }

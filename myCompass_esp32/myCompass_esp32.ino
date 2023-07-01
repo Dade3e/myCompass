@@ -23,13 +23,7 @@ TinyGPSPlus gps;
 #define SCREEN_ADDRESS 0x3C ///< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-int calibrationData[3][2];
-bool changed = false;
-bool done = false;
-int t = 0;
-int c = 0;
 
-bool calibrated = false;
 
 const byte UP = 2;
 const byte DOWN = 4;
@@ -92,30 +86,30 @@ void setup() {
   pinMode(B, INPUT_PULLUP);
   pinMode(battery, INPUT);
 
-  if(!SD.begin(5)){
-    Serial.println("Card Mount Failed");
-    return;
-  }
-
+  
   if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
     Serial.println(F("SSD1306 allocation failed"));
     for(;;);
   }
+
+  display.setRotation(2);
+  display.ssd1306_command(0x81);
+  display.ssd1306_command(brigh);
   
+  while(!SD.begin(5)){
+    Serial.println("Card Mount Failed");
+    SDerror();
+    delay(2000);
+  }
+
 
   String index = readFileString(SD, "/index.txt");
   TARGET_NAME = split(index, ',', 1);
-  Serial.println(index);
   TARGET_COORDS[0] = split(index, ',', 2).toDouble();
   TARGET_COORDS[1] = split(index, ',', 3).toDouble();
 
   s_coords = split(index, ',', 0).toDouble();
   brigh  = split(index, ',', 4).toInt();
-
-  display.setRotation(2);
-  display.ssd1306_command(0x81);
-  display.ssd1306_command(brigh);
-
 
   Start(TARGET_NAME);
   delay(2000);
