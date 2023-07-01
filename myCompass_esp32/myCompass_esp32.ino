@@ -9,6 +9,7 @@
 #include <Adafruit_SSD1306.h>
 
 #include "./icons.h"
+#include "./variabili_tetris.h"
 
 static const uint32_t GPSBaud = 9600;
 
@@ -62,7 +63,7 @@ String num[] = {  "1 2 3 <",
                   "7 8 9 .",
                   "0 . END"};
 
-String menu_list[] = {"Walk", "Select point", "Save Point", "Create Point", "Compass calib", "Set brightness"};
+String menu_list[] = {"Walk", "Select point", "Save Point", "Create Point", "Compass calib", "Set brightness", "Tetris"};
 
 //Arrow
 const float pi = 3.14159267 ;
@@ -85,6 +86,7 @@ void setup() {
   pinMode(A, INPUT_PULLUP);
   pinMode(B, INPUT_PULLUP);
   pinMode(battery, INPUT);
+  pinMode(SPEAKER_PIN, OUTPUT);
 
   
   if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
@@ -184,6 +186,13 @@ void loop() {
   //SET BRIGHTNESS
   if(stato == 5){
     setbrightness();
+    stato = Menu();    
+  }
+
+  //TETRIS
+  if(stato == 6){
+    SetupTetris();
+    display.setRotation(2);
     stato = Menu();    
   }
 }
