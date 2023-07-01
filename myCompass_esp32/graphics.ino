@@ -393,6 +393,8 @@ void Walk(String dest, int azimuth ,int dist, int sat){
   display.setCursor(1, 54);
   if(dist > 9999){
     display.print(dist/1000);
+    display.print(".");
+    display.print((dist%1000)/100);
     display.println(" Km");
   }else{
     display.print(dist);
